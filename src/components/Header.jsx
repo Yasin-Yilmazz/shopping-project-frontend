@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "../my.css";
+import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => {
   return (
@@ -17,12 +18,22 @@ const Header = () => {
             style={{ maxHeight: "100px", width: "85%" }}
             navbarScroll
           >
-            <Nav.Link href="#action1" className="">
-              <i className="fa-solid fa-house"></i> Home
-            </Nav.Link>
-            <Nav.Link href="#product" className="">
-              <i className="fa-sharp fa-solid fa-cart-shopping"></i> Product
-            </Nav.Link>
+            <LinkContainer to="/">
+              <Nav.Link className="">
+                <i className="fa-solid fa-house"></i> Home
+              </Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/about">
+              <Nav.Link className="">
+                <i class="fa-solid fa-address-card"></i> About
+              </Nav.Link>
+            </LinkContainer>
+
+            <LinkContainer to="/product">
+              <Nav.Link className="">
+                <i className="fa-sharp fa-solid fa-cart-shopping"></i> Product
+              </Nav.Link>
+            </LinkContainer>
 
             <Form className="d-flex" style={{ marginLeft: "30%" }}>
               <Form.Control
@@ -34,12 +45,16 @@ const Header = () => {
               <Button variant="outline-success">Search</Button>
             </Form>
           </Nav>
-          <Nav.Link href="#login" className="">
-            <i className="fa-solid fa-user"></i> Login
-          </Nav.Link>
-          <Nav.Link href="#register" className="mx-3">
-            <i className="fa-solid fa-user-plus"></i> Register
-          </Nav.Link>
+          <LinkContainer to="/login">
+            <Nav.Link className="">
+              <i className="fa-solid fa-user"></i> Login
+            </Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/register">
+            <Nav.Link className="mx-3">
+              <i className="fa-solid fa-user-plus"></i> Register
+            </Nav.Link>
+          </LinkContainer>
         </Navbar.Collapse>
       </Container>
     </Navbar>
