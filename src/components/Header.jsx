@@ -3,12 +3,13 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import "../my.css";
 
 const Header = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="./">Shopping</Navbar.Brand>
+        <Navbar.Brand href="/">Shopping</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -20,7 +21,7 @@ const Header = () => {
               <i className="fa-solid fa-house"></i> Home
             </Nav.Link>
             <Nav.Link href="#product" className="">
-              <i class="fa-sharp fa-solid fa-cart-shopping"></i> Product
+              <i className="fa-sharp fa-solid fa-cart-shopping"></i> Product
             </Nav.Link>
 
             <Form className="d-flex" style={{ marginLeft: "30%" }}>
